@@ -1,6 +1,6 @@
 var arregloNumero = [1, 2, 3, 4]
 // console.log(arregloNumero)
-// indexOf, encontra el indice del elemento
+// indexOf, encuntra el indice del elemento
 // console.log(arregloNumero.indexOf(0))
 // añadir elementos, Push
 //console.log(arregloNumero.push(10))
