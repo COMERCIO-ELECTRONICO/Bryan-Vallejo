@@ -20,25 +20,25 @@ var json1 = json.arreglos.uno.map((item, index, arreglos) => {
 console.log("Multiplicación * 2")
 console.log(json1)
 var json2 = json.arreglos.uno.filter((item, valor, arreglos) => {
-  return valor === 2 || valor === 4 || valor === 6
+  return valor%2 === 0
 });
 console.log("Posiciones pares")
 console.log(json2)
 var json2 = json.arreglos.uno.filter((item, valor, arreglos) => {
-  return item === 2 || item === 4 || item === 6 || item === 8 || item === 10
+  return item%2 === 0
 });
 console.log("Valores pares")
 console.log(json2)
 
 //Arreglo dos, filter los los impares , sumar + 2
 var json3 = json.arreglos.dos.filter((item, valor, arreglos) => {
-  return valor === 1 || valor === 3 || valor === 5 || valor === 7;
+  return valor%2 != 0
 });
 console.log("Posiciones inpares")
 console.log(json3)
 
 var json3 = json.arreglos.dos.filter((item, valor, arreglos) => {
-    return item.valor === 1 || item.valor === 23 || item.valor === 45;
+    return item.valor%2 != 0
   });
   console.log("Valores inpares")
   console.log(json3)
