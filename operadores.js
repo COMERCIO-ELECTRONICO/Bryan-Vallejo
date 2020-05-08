@@ -1,4 +1,4 @@
-var arregloNumero = [1, 2, 3, 4]
+/*var arregloNumero = [1, 2, 3, 4]
 // console.log(arregloNumero)
 // indexOf, encontra el indice del elemento
 // console.log(arregloNumero.indexOf(0))
@@ -70,7 +70,7 @@ console.log(arregloFilter);*/
 // true, false
 // some verifica si almenos uno cumplen una condicion 
 
-
+/*
 var operadoresMapyFilter = arreglo2
     .map(
         (item) => {
@@ -100,4 +100,13 @@ var a = {
         ],
     }
 
-}
+}*/
+var arregloReduce = [2,1,11,3,45]
+var valorSumaArreglo = arregloReduce
+.reduce(
+    (acumulador, item, indice, arreglo)=>{
+  console.log(acumulador)
+return acumulador + item
+    }, 0 //el valor inicial del acumulador
+)
+console.log(valorSumaArreglo)
