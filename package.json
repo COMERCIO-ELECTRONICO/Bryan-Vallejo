@@ -1,0 +1,27 @@
+{
+  "name": "bryan-vallejo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "01_JAVASCRIPT.js",
+  "dependencies": {
+    "joi": "^14.3.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/COMERCIO-ELECTRONICO/Bryan-Vallejo.git"
+  },
+  "author": "Bryan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/COMERCIO-ELECTRONICO/Bryan-Vallejo/issues"
+  },
+  "homepage": "https://github.com/COMERCIO-ELECTRONICO/Bryan-Vallejo#readme",
+  "dependencies":{
+    "joi": "^14.3.1"
+  }
+   
+}
