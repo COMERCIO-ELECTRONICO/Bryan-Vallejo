@@ -4,7 +4,8 @@
   "description": "",
   "main": "01_JAVASCRIPT.js",
   "dependencies": {
-    "joi": "^14.3.1"
+    "joi": "^14.3.1",
+    "typescript": "^3.8.3"
   },
   "devDependencies": {},
   "scripts": {
@@ -19,9 +20,5 @@
   "bugs": {
     "url": "https://github.com/COMERCIO-ELECTRONICO/Bryan-Vallejo/issues"
   },
-  "homepage": "https://github.com/COMERCIO-ELECTRONICO/Bryan-Vallejo#readme",
-  "dependencies":{
-    "joi": "^14.3.1"
-  }
-   
+  "homepage": "https://github.com/COMERCIO-ELECTRONICO/Bryan-Vallejo#readme"
 }
