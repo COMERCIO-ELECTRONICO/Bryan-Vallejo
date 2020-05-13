@@ -1,9 +1,9 @@
 // tipo datos
-const nombre: string = 'Bryan';
+const nombre: string = 'kevin';
 const numero: number = 1;
 const Bool: boolean = true;
 const objetoUsuario: object = {
-    nombre: 'Bryan',
+    nombre: 'kevin',
 }
 
 // arreglos
@@ -63,5 +63,40 @@ class hijo extends Persona {
     }
 }
 
-const hijoPersona = new hijo('Bryan', 'Vallejo');
+const hijoPersona = new hijo('kevin', 'jimenez');
 console.log(hijoPersona);
+
+class Person {
+    constructor(
+        protected nombre?: string,
+        protected apellido?: string
+    ) { }
+}
+
+class alumno extends Person {
+    constructor(
+        protected nombre?: string,
+        protected apellido?: string
+    ) {
+        super(nombre, apellido);
+    }
+
+    set setNombre(nombre: string | any) {
+        this.nombre = nombre;
+    }
+    set setApellido(apellido: string | any) {
+        this.apellido = apellido;
+    }
+
+    get getNombre(): string | any {
+        return this.nombre
+    }
+    get getApellido(): string | any {
+        return this.nombre
+    }
+}
+const alumnoNuevo: alumno = new alumno();
+alumnoNuevo.setNombre('kevin');
+alumnoNuevo.setApellido('');
+alumnoNuevo.getApellido();
+
