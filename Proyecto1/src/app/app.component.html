@@ -1,0 +1,29 @@
+<h1>TITULO NOMBRE</h1>
+<h2>h2</h2>
+<h3>h3</h3>
+<h4>h4</h4>
+<h5>h5</h5>
+<h6>h6</h6>
+<img src="https://media.metrolatam.com/2019/10/16/goku-b9b032782ae8ccae3cacbb80bc861e2c-1200x800.jpg" width="400px"
+     height="400px" alt="">
+<p>Listas no ordenadas etiqueta ul</p>
+<ul>
+  <li>opcion</li>
+  <li>opcion</li>
+</ul>
+<p>Listas ordenadas etiqueta ol</p>
+<ol>
+  <li>opcion</li>
+  <li>opcion</li>
+</ol>
+
+<app-mi-primer-componente
+  [titulo]="tituloPadre"
+  [nombreBoton]="nombreBotonPadre"
+  [imagenPath]="imagenPadre"
+  [datos]="datosHijo"
+  
+  (saludoHijo)="obtenerRespuestaHjo($event)"
+>
+</app-mi-primer-componente>
+
