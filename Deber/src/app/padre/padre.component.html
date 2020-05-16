@@ -1,0 +1,13 @@
+<h1>Formulario</h1>
+<p>Nombre del Boton:</p>
+<input type="text"
+[(ngModel)]="boton">
+<p>Año:</p>
+<input type="number"
+[(ngModel)]="yyyy">
+<app-hijo
+[nombreBoton]="boton" [años]="yyyy" (calcular)="obtenerRespuestaHijo($event)"
+>
+</app-hijo>
+
+{{edad}}

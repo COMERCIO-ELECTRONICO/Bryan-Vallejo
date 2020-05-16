@@ -1,8 +1,31 @@
 <h1>
-    Bryan Vallejo
-    {{titulo}}
+    KEVIN JIMENEZ
+    {{datos.tituloPadre}}
 </h1>
+
+<h1>
+    PIPES
+</h1>
+<p>
+    objeto (JSON)
+</p>
+{{datos | json}}
+
+<p>
+    fecha
+</p>
+{{fecha | date: 'yy MM dd'}}
+<p>
+    currency
+</p>
+{{sueldo | currency}}
+{{nombre | uppercase}}
+
+
+
+
 <button (click)="SALUDAR()">
-{{nombreBoton}}
+    {{datos.nombreBotonPadre}}
 </button>
-<img [src]="imagenPath"  alt="">
+
+<img [src]="" alt="">
