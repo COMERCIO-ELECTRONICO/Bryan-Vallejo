@@ -1,26 +1,26 @@
 <div class="container">
-  <h1>
+  <h1 class="titulo">
     TITULO
   </h1>
 
   <div class="row" style="background-color: yellow;">
     FILA
-    <div class="col-md-12" style="background-color: chocolate;">
+    <div class="col-sm-12" style="background-color: chocolate;">
       columna 12
     </div>
-    <div class="col-md-6" style="background-color: green;">
+    <div class="col-sm-6" style="background-color: green;">
       columna 6
     </div>
-    <div class="col-md-6" style="background-color: goldenrod;">
+    <div class="col-sm-6" style="background-color: goldenrod;">
       columna 6
     </div>
-    <div class="col-md-4" style="background-color: rebeccapurple;">
+    <div class="col-sm-4" style="background-color: rebeccapurple;">
       columna 4
     </div>
-    <div class="col-md-4" style="background-color: red;">
+    <div class="col-sm-4" style="background-color: red;">
       columna 4
     </div>
-    <div class="col-md-4" style="background-color: gray;">
+    <div class="col-sm-4" style="background-color: gray;">
       columna 4
     </div>
   </div>
@@ -28,3 +28,52 @@
 </div>
 <div>
 </div>
+
+<h1>
+  DIRECTIVAS
+</h1>
+<h2>angular => ngIf</h2>
+
+<button type="button" class="btn btn-outline-success" (click)="eventoClick()">
+  Success</button>
+<p *ngIf="esconderHola">
+  hola
+</p>
+
+<h2>angular => ngfor</h2>
+{{arregloNuemros}}
+<li *ngFor="let numero of arregloNuemros">
+  <ul> {{numero.nombre}} </ul>
+</li>
+
+<h1>
+  emmet
+</h1>
+*3
++
+>
+.clase
+.div-titulo.col-md-1*2>col-md-12
+<div class="titulo"></div>
+
+<div class="row titulo"></div>
+
+<div class="nombreClase">
+</div>
+
+<div class="row">
+  <div class="col-sm-12"></div>
+  <div class="col-sm-6"></div>
+  <div class="col-sm-3"></div>
+  <div class="col-sm-3"></div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12"></div>
+  <div class="col-sm-6"></div>
+  <div class="col-sm-3"></div>
+  <div class="col-sm-3"></div>
+</div>
+<app-deber>
+  
+</app-deber>
