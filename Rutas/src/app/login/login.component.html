@@ -1,1 +1,94 @@
 <p>login works!</p>
+<div class="container">
+  <h1>
+    variables html #
+  </h1>
+  <form (ngSubmit)="obtenerFormulario(formularioUsario)" #formularioUsario="ngForm">
+
+    <h4>Estado formulario</h4>
+    <h5>
+      <pre>
+        valid: {{formularioUsario.valid}}
+        invalid: {{formularioUsario.invalid}}
+        dirty: {{formularioUsario.dirty}}
+        touched: {{formularioUsario.touched}}
+        untouched: {{formularioUsario.untouched}}
+      </pre>
+    </h5>
+
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input
+      type="email"
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+      [(ngModel)]="email"
+        name="email"
+        placeholder="ejemplo"
+        minlength="3"
+        required
+        pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}"
+        #campoEmail="ngModel">
+      <h4>
+        Estados del campo email
+      </h4>
+      <pre>
+        valid: {{campoEmail.valid}}
+        invalid: {{campoEmail.invalid}}
+        dirty: {{campoEmail.dirty}}
+        touched: {{campoEmail.touched}}
+        untouched: {{campoEmail.untouched}}
+      </pre>
+
+      {{campoEmail.errors | json}}
+
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div
+    class="alert alert-danger"
+    role="alert"
+    *ngIf="(campoEmail.errors)
+    && campoEmail.dirty === true">
+      <p
+      *ngIf="campoEmail.errors.required">
+        Campo email requerido
+      </p>
+      <p
+      *ngIf="campoEmail.errors.minlength">
+        minimo 3
+      </p>
+      <p
+      *ngIf="campoEmail.errors.pattern">
+        No es email
+      </p>
+
+    </div>
+
+
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input
+      type="password"
+      class="form-control"
+      id="exampleInput"
+      aria-describedby="emai"
+      [(ngModel)]="contrasena"
+        name="contrasena"
+        placeholder="****"
+        minlength="4"
+        required
+        #campoContrasena="ngModel">
+    </div>
+
+
+    <button
+    [disabled]="formularioUsario.invalid"
+    type="submit"
+    class="btn btn-primary">
+    Submit</button>
+  </form>
+
+</div>

@@ -1,0 +1,211 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card p-3">
+              <form (ngSubmit)="FormDeber(FormularDeber)" #FormularDeber="ngForm">
+                <div class="row">
+                  <div class="col">
+                    <input type="text" 
+                    class="form-control" 
+                    placeholder="Nombre"
+                    [(ngModel)]="nombre"
+                    name="nombre"
+                    required
+                    minlength="3"
+                    #Nombre="ngModel">
+                  </div>
+                  <div class="col">
+                    <input type="text" 
+                    class="form-control" 
+                    placeholder="Apellido" 
+                    [(ngModel)]="apellido"
+                    name="apellido"
+                    required
+                    minlength="3"
+                    #Apellido="ngModel">
+                  </div>
+                </div>
+                <div class="row mt-3">
+                  <div class="col">
+                    <div
+                  class="alert alert-danger"
+                  role="alert"
+                  *ngIf="(Nombre.errors)
+                  && Nombre.dirty === true">
+                    <p
+                    *ngIf="Nombre.errors.required">
+                      Campo Nombre es requerido
+                    </p>
+                    <p
+                    *ngIf="Nombre.errors.minlength">
+                      Nombre minimo 3 caracteres
+                    </p>
+                    
+              
+                  </div>
+                  </div>
+                  <div class="col">
+                    <div
+                  class="alert alert-danger"
+                  role="alert"
+                  *ngIf="(Apellido.errors)
+                  && Apellido.dirty === true">
+                    <p
+                    *ngIf="Apellido.errors.required">
+                      Campo Apellido es requerido
+                    </p>
+                    <p
+                    *ngIf="Apellido.errors.minlength">
+                      Apellido minimo 3 caracteres
+                    </p>
+                    
+              
+                  </div>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col">
+                    <input type=email class="form-control" placeholder="Email" 
+                    aria-describedby="emailHelp"
+                    [(ngModel)]="email"
+                      name="email"
+                      placeholder="Email"
+                      minlength="3"
+                      required
+                      pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}"
+                      #Email=ngModel
+                    >
+                  </div>
+                 
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Telefono" 
+                    [(ngModel)]="telefono"
+                    name="telefono"
+                    minlength="10"
+                    maxlength="10"
+                    required
+
+                    #Telefono="ngModel">
+                  </div>
+                </div>
+                <div class="row mt-3">
+                  <div class="col">
+                  <div
+                  class="alert alert-danger"
+                  role="alert"
+                  *ngIf="(Email.errors)
+                  && Email.dirty === true">
+                    <p
+                    *ngIf="Email.errors.required">
+                      Campo email requerido
+                    </p>
+                    <p
+                    *ngIf="Email.errors.minlength">
+                      minimo 3
+                    </p>
+                    <p
+                    *ngIf="Email.errors.pattern">
+                      No es email
+                    </p>
+              
+                  </div>
+                  </div>
+                  <div class="col">
+                    <div
+                  class="alert alert-danger"
+                  role="alert"
+                  *ngIf="(Telefono.errors)
+                  && Telefono.dirty === true">
+                    <p
+                    *ngIf="Telefono.errors.required">
+                      Campo Telefono es requerido
+                    </p>
+                    <p
+                    *ngIf="Telefono.errors.minlength">
+                      Telefono tiene 10 dijitos
+                    </p>
+                    
+              
+                  </div>
+                  </div>
+                </div>
+                <hr> 
+                <div class="row">
+                  <div class="col">
+                    <input type="password" 
+                    class="form-control" 
+                    placeholder="Clave"
+                    [(ngModel)]="clave1"
+                    name="clave1"
+                    required
+                    minlength="3"
+                    #Clave1="ngModel">
+                  </div>
+                  <div class="col">
+                    <input type="password" 
+                    class="form-control" 
+                    placeholder="Clave"
+                    [(ngModel)]="clave2"
+                    name="clave2"
+                    required
+                    minlength="3"
+                    #Clave2="ngModel">
+                  </div>
+                </div>
+                <div class="row mt-3">
+                  <div class="col">
+                    <div
+                  class="alert alert-danger"
+                  role="alert"
+                  *ngIf="(Clave1.errors)
+                  && Clave1.dirty === true">
+                    <p
+                    *ngIf="Clave1.errors.required">
+                      Campo Clave1 es requerido
+                    </p>
+                    <p
+                    *ngIf="Clave1.errors.minlength">
+                      Clave1 minimo 3 caracteres
+                    </p>
+                    
+              
+                  </div>
+                  </div>
+                  <div class="col">
+                    <div
+                  class="alert alert-danger"
+                  role="alert"
+                  *ngIf="(Clave2.errors)
+                  && Clave2.dirty === true">
+                    <p
+                    *ngIf="Clave2.errors.required">
+                      Campo Clave2 es requerido
+                    </p>
+                    <p
+                    *ngIf="Clave2.errors.minlength">
+                      Clave2 minimo 3 caracteres
+                    </p>
+                  </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <div class="alert alert-danger" role="alert" *ngIf="(Clave2.dirty ===true) && Clave1.value !== Clave2.value">
+                      Las Claves no son iguales
+                    </div>
+                  </div>
+                </div>
+                <hr>
+                <div class="row mt-3">
+                  <div class="col">
+                    <button type="submit" class="btn btn-block">Formular</button>
+                  </div>
+                  
+                </div>
+                
+              </form>
+            </div>
+        </div>
+    </div>
+</div>

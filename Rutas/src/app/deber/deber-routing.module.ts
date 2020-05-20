@@ -1,3 +1,4 @@
+import { FormularioComponent } from './formulario/formulario.component';
 import { EditarComponent } from './editar/editar.component';
 import { CrearComponent } from './crear/crear.component';
 import { ListarComponent } from './../deber/listar/listar.component';
@@ -17,8 +18,11 @@ component: CrearComponent
   {
 path: 'editar',
 component: EditarComponent
+  },
+  {
+path: 'Form',
+component: FormularioComponent
   }
-
 ];
 
 @NgModule({

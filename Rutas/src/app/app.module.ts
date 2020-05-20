@@ -1,26 +1,27 @@
-import { DeberModule } from './deber/deber.module';
+import { UsuarioModule } from './usuario/usuario.module';
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
 import {LoginComponent} from './login/login.component';
 import {HomeComponent} from './inicio/home/home.component';
-import {NoEncontradaComponent} from './inicio/no-encontrada/no-encontrada.component';
-import {AppRoutesModule} from './app.routes';
-import {UsuarioModule} from './usuario/usuario.module';
+import {NoEncontradoComponent} from './inicio/no-encontrado/no-encontrado.component';
+import {AppRoutesComponent} from './app.routes';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    NoEncontradaComponent
+    NoEncontradoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutesModule,
+    AppRoutesComponent,
     UsuarioModule,
-    DeberModule
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

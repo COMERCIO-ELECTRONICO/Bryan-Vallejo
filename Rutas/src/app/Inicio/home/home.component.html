@@ -1,19 +1,12 @@
-<h3>home.component.html</h3>
 <p>home works!</p>
-<h2>First Component</h2>
-
-<nav>
-  <ul>
-    <li><a [routerLink]="['login2']">Relative Route to second component</a></li>
-  </ul>
-</nav>
-<button [routerLink]="['/deber','listar']">
-  Listar Deber
+<button [routerLink]="['/login']">
+    ir a login
 </button>
-<button [routerLink]="['/deber','editar']">
-  Editar Deber
+<button [routerLink]="['/usuario','listar']">
+    ir a USAURIO LISTAR
 </button>
-<button [routerLink]="['/deber','crear']">
-  Crear Deber
+<button
+(click)="irAUsuarioListar()"
+>
+    ir a usuario con click
 </button>
-<router-outlet></router-outlet>

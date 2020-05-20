@@ -2,14 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { UsuarioRoutingModule } from './usuario-routing.module';
-import { UsuarioCrearComponent } from './usuario-crear/usuario-crear.component';
-import { UsuarioListarComponent } from './usuario-listar/usuario-listar.component';
-import { UsuarioInicioComponent } from './usuario-inicio/usuario-inicio.component';
-import { UsuarioEditarComponent } from './usuario-editar/usuario-editar.component';
+import { ListarComponent } from './listar/listar.component';
+import { CrearComponent } from './crear/crear.component';
 
 
 @NgModule({
-  declarations: [UsuarioCrearComponent, UsuarioListarComponent, UsuarioInicioComponent, UsuarioEditarComponent],
+  declarations: [ListarComponent, CrearComponent],
   imports: [
     CommonModule,
     UsuarioRoutingModule

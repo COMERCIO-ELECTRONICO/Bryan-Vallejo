@@ -1,49 +1,55 @@
-import {Routes, RouterModule} from '@angular/router';
-import {HomeComponent} from './inicio/home/home.component';
-import {LoginComponent} from './login/login.component';
-import {NgModule} from '@angular/core';
-import {NoEncontradaComponent} from './inicio/no-encontrada/no-encontrada.component';
+import { LoginComponent } from './login/login.component';
+import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './inicio/home/home.component';
+import { NgModule } from '@angular/core';
+import { NoEncontradoComponent } from './inicio/no-encontrado/no-encontrado.component';
 
 const rutas: Routes = [
   {
-    path: 'Inicio',
+    path: 'inicio',
     component: HomeComponent,
-    children: [
-      {
-        path: 'login2',
-        component: LoginComponent
-      }
-    ]
+  },
+  {
+    path: ':id/inicio',
+    component: HomeComponent,
+  },
+  {
+    path: 'inicio/:id',
+    component: HomeComponent,
   },
   {
     path: 'login',
-    component: LoginComponent
+    component: LoginComponent,
   },
   {
     path: 'usuario',
-    loadChildren: () => import('./usuario/usuario.module').then(m => m.UsuarioModule)
+    loadChildren: () =>
+      import('./usuario/usuario.module').then(
+        (usuario) => usuario.UsuarioModule
+      ),
   },
   {
     path: 'deber',
-    loadChildren: () => import('./deber/deber.module').then(deber => deber.DeberModule)
+    loadChildren: () =>
+      import('./deber/deber.module').then(
+        deber => deber.DeberModule
+      ),
   },
   {
     path: '',
-    redirectTo: 'Inicio',
-    pathMatch: 'full'
+    redirectTo: '/deber/Form',
+    pathMatch: 'full',
   },
   {
     path: '**',
-    component: NoEncontradaComponent
-  }
+    component: NoEncontradoComponent,
+  },
 ];
 
 @NgModule({
-
   imports: [RouterModule.forRoot(rutas)],
+  providers: [],
+  declarations: [],
   exports: [RouterModule],
-
 })
-
-export class AppRoutesModule {
-}
+export class AppRoutesComponent {}
