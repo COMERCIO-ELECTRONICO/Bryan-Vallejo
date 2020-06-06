@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm 2">
+        <img src="https://image.freepik.com/vector-gratis/logo-cine_23-2147503279.jpg" class="mr-3"
+                    alt="..." width="50%" height="75%">
+    </div>
+    <div class="col-sm-6">
+        <h1 style="text-align: center;" [routerLink]="['/home']">HOME</h1>
+    </div>
+    <div class="col-sm-4">
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/']" >Cerrar Sesión</a>
+            </li>
+          
+          </ul>
+    </div>
+</div>
+  <div class="row mt-5">
+    <div class="offset-md-1 col-md-10">
+      <div class="card">
+        <div class="card-header">
+          Mis Reservas
+        </div>
+        <div class="card-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col"> # Sala</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody *ngFor=" let ReservaDatos of reservas">
+              <tr>
+                <th scope="row">{{ReservaDatos.id}}</th>
+                <td>{{ReservaDatos.id_SalaPuestos.id_Sala}}</td>
+                <td class="text-right">
+                    <button type="button" class="btn btn-primary " (click)="eliminar(ReservaDatos.id, ReservaDatos.id_SalaPuestos.id)">
+
+                        <i class="pi pi-trash" style="font-size: 1em" > Borrar</i>
+                    </button>
+
+                </td>
+                
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

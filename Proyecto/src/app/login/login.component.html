@@ -1,0 +1,106 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="offset-md-3 col-md-6">
+      <div class="container">
+          <form (ngSubmit)="ObtenerFormulario()">
+<div class="card p-3" >
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3 pt-2">
+                Usario:
+              </div>
+              <div class="col-md-9">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Usuario"
+                 [(ngModel)]="user"
+                  name="user"
+                  required
+                  minlength="4"
+                 #usuario="ngModel"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="container mt-3">
+              <div class="row">
+                  <div class="offset-md-3 col-md-9">
+                    <div
+                    class="alert alert-danger text-monospace"
+                    role="alert"
+                    *ngIf="(usuario.errors)
+                    && usuario.dirty === true">
+                      <h6 
+                      *ngIf="usuario.errors.required">
+                        Campo Usuario es requerido
+                      </h6 >
+                      <h6 
+                      *ngIf="usuario.errors.minlength">
+Tres caracteres minimo
+                      </h6 >
+                      
+                      
+                
+                    </div>
+                  </div>
+              </div>
+          </div>
+          <div class="container pt-3">
+            <div class="row">
+              <div class="col-md-3 pt-2">
+                Clave:
+              </div>
+              <div class="col-md-9">
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="Clave"
+                 [(ngModel)]="clave"
+                  name="clave"
+                  required
+                  minlength="4"
+                 #pwd="ngModel"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="container mt-3">
+            <div class="row">
+                <div class="offset-md-3 col-md-9">
+                  <div
+                  class="alert alert-danger text-monospace"
+                  role="alert"
+                  *ngIf="(pwd.errors)
+                  && pwd.dirty === true">
+                    <h6 
+                    *ngIf="pwd.errors.required">
+                      Campo Clave es requerido
+                    </h6 >
+                    <h6 
+                    *ngIf="pwd.errors.minlength">
+Tres caracteres minimo
+                    </h6 >
+                    
+                    
+              
+                  </div>
+                </div>
+            </div>
+        </div>
+          <div class="container mt-3">
+              <div class="row">
+                  <div class="offset-md-3 col-md-6">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block" (click)="Login()">
+                        <i class="pi pi-user" style="font-size: 1em"></i>
+                           Iniciar Sesión</button>
+                  </div>
+              </div>
+          </div>
+        </div>
+        </form>
+      </div>
+    
+    </div>
+  </div>
+</div>

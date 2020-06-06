@@ -1,0 +1,100 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm 2">
+        <img src="https://image.freepik.com/vector-gratis/logo-cine_23-2147503279.jpg" class="mr-3"
+                     width="50emr" height="50emr">
+    </div>
+    <div class="col-sm-8">
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link" (click)="ListPeliculas()">Listar Peliculas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="Peliculas()">Peliculas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="ListUser()">Lista Usuarios</a>
+          </li>
+                            <li class="nav-item">
+                              <a class="nav-link" [routerLink]="['/']" >Cerrar Sesión</a>
+                            </li>
+          </ul>
+    </div>
+</div>
+  <div class="row mt-5">
+    <div class="offset-2 col-md-8">
+      <div class="card">
+        <div class="card-header">
+          Peliculas
+        </div>
+        <div class="card-body">
+          <div class="form">
+            <div class="container">
+              <div class="row">
+                <div class="col-3">Nombre:</div>
+                <div class="col-9">
+                  <input
+                    type="text"
+                    class="form-control btn-block"
+                    placeholder="Nombre"
+                    [(ngModel)]="nombre"
+                    name="nombre"
+                    
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="container mt-3">
+              <div class="row">
+                <div class="col-3">Categoria:</div>
+                <div class="col-9">
+                  <input
+                    type="text"
+                    class="form-control btn-block"
+                    placeholder="Categoria"
+                    [(ngModel)]="categoria"
+                    name="categoria"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="container mt-3">
+              <div class="row">
+                <div class="col-3">Imagen:</div>
+                <div class="col-9">
+                  <input
+                    type="text"
+                    class="form-control btn-block"
+                    placeholder="Imagen"
+                    [(ngModel)]="imagen"
+                    name="imagen"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="container mt-3">
+              <div class="row">
+                <div class="col-3">Sala:</div>
+                <div class="col-9">
+                <mat-form-field>  
+                  <mat-label>Selecciona la Sala</mat-label>
+                <mat-select [(value)]="select" (selectionChange)='camposelec($event)'  >
+                  <mat-option  *ngFor=" let SALAid of salas" [value]="SALAid.id">{{SALAid["nombre"]}}</mat-option>
+                </mat-select>
+              </mat-form-field>  
+                </div>
+              </div>
+            </div>
+            <div class="container mt-3">
+                <div class="row">
+                    <div class="col-md-12">
+                        <button type="button" class="btn btn-primary btn-block" (click)="registrarPeli()">Registrar</button>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

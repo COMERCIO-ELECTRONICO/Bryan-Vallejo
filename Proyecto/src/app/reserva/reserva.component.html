@@ -1,0 +1,48 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm 2">
+        <img src="https://image.freepik.com/vector-gratis/logo-cine_23-2147503279.jpg" class="mr-3"
+                    alt="..." width="50%" height="75%">
+    </div>
+    <div class="col-sm-6">
+        <h1 style="text-align: center;" [routerLink]="['/home']">HOME</h1>
+    </div>
+    <div class="col-sm-4">
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/']" >Cerrar Sesión</a>
+            </li>
+           
+          </ul>
+    </div>
+</div>
+  <div class="row mt-5">
+    <div class="offset-md-1 col-md-10">
+<div class="card">
+  <div class="card-header">
+    Reservas
+  </div>
+  <div class="card-body">
+    <div class="container">
+      <div class="row">
+        <div class=" offset-md-3 col-md-6">
+          
+          <mat-form-field class="btn-block">  
+            <mat-label >Selecciona el Puesto</mat-label>
+            <mat-select [(value)]="select" (selectionChange)='camposelec($event)'  >
+              <mat-option  *ngFor=" let SalaPuestosRes of sala" [value]="SalaPuestosRes.id">Fila:{{SalaPuestosRes.id_Puestos.Columna}},&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Columna:{{SalaPuestosRes.id_Puestos.Fila}}</mat-option>
+            </mat-select>
+          </mat-form-field>  
+        </div>
+        <div class=" offset-md-3 col-md-6">
+          <button type="button" class="btn btn-primary btn-block" (click)="reservar()">Reservar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+            

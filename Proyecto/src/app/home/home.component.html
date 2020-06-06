@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row">
+      <div class="col-sm 2">
+          <img src="https://image.freepik.com/vector-gratis/logo-cine_23-2147503279.jpg" class="mr-3"
+                      alt="..." width="50%" height="75%">
+      </div>
+      <div class="col-sm-6">
+          <h1 style="text-align: center;" [routerLink]="['/home']">HOME</h1>
+      </div>
+      <div class="col-sm-4">
+          <ul class="nav justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link" (click)="MisReservas()">Mis Reservas</a>
+            </li>
+                    <li class="nav-item">
+                      <a class="nav-link" [routerLink]="['/']" >Cerrar Sesión</a>
+                    </li>
+            </ul>
+      </div>
+  </div>
+  <div class="row mt-3">
+      <div class="col-sm-4"  *ngFor="let sala of GetSala">
+          <div class="card" style="width: 18rem;">
+            
+              <img src="{{sala.id_Pelicula.imgPath}}" class="card-img-top" width="100rem" height="400rem">
+              <div class="card-body">
+                <h5 class="card-title">{{sala.id_Pelicula.nombre}}</h5>
+                <p class="card-text">{{sala.id_Pelicula.clas}}</p>
+                <button  class="btn btn-primary" (click)="Reservar(sala.id)">Reservar</button>
+              </div>
+            </div>
+      </div>
+  </div>
+</div>

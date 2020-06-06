@@ -1,0 +1,136 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm 2">
+      <img
+        src="https://image.freepik.com/vector-gratis/logo-cine_23-2147503279.jpg"
+        class="mr-3"
+        width="50emr"
+        height="50emr"
+      />
+    </div>
+    <div class="col-sm-8">
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link" (click)="ListPeliculas()"> Lista Peliculas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="Peliculas()">Peliculas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="ListUser()">Lista Usuarios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/']">Cerrar Sesión</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <!-- <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Clase</th>
+          <th scope="col">Imagen</th>
+          <th scope="col">Acciones</th>
+        </tr>
+      </thead>
+      <tbody *ngFor=" let listadopeliculas of peliculas" >
+        <tr>
+          <th scope="row">{{listadopeliculas.id}}</th>
+          <td> <input type="text" value="{{listadopeliculas.nombre}}" >   </td>
+          <td> <input type="text" value="{{listadopeliculas.clas}}"> </td>
+          <td> <input type="text" value="{{listadopeliculas.imgPath}}"> </td>
+          <td><button type="button" class="btn btn-primary " (click)="eliminar(listadopeliculas.id)">
+            
+            <i class="pi pi-trash" style="font-size: 1em" > Borrar</i>
+          </button></td>
+        </tr>
+      </tbody>
+    </table> -->
+    <p-table [value]="peliculas">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>id</th>
+          <th>Nombre</th>
+          <th>Categoria</th>
+          <th>Imagen</th>
+          <th>Editar</th>
+          <th>Borrar</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-rowData>
+        <tr>
+          <td pEditableColumn>
+            {{ rowData.id }}
+          </td>
+          <td pEditableColumn>
+            <p-cellEditor>
+              <ng-template pTemplate="input">
+                <input
+                  pInputText
+                  type="text"
+                  [(ngModel)]="rowData.nombre"
+                  required
+                />
+              </ng-template>
+              <ng-template pTemplate="output">
+                {{ rowData.nombre }}
+              </ng-template>
+            </p-cellEditor>
+          </td>
+          <td pEditableColumn>
+            <p-cellEditor>
+              <ng-template pTemplate="input">
+                <input
+                  pInputText
+                  type="text"
+                  [(ngModel)]="rowData.clas"
+                  required
+                />
+              </ng-template>
+              <ng-template pTemplate="output">
+                {{ rowData.clas }}
+              </ng-template>
+            </p-cellEditor>
+          </td>
+          <td pEditableColumn>
+            <p-cellEditor>
+              <ng-template pTemplate="input">
+                <input
+                  pInputText
+                  type="text"
+                  [(ngModel)]="rowData.imgPath"
+                  required
+                />
+              </ng-template>
+              <ng-template pTemplate="output">
+                {{ rowData.imgPath }}
+              </ng-template>
+            </p-cellEditor>
+          </td>
+
+          <td pEditableColumn>
+            <button
+              type="button"
+              class="btn btn-primary"
+              (click)="guardar(rowData)"
+            >
+              <i class="pi pi-save" style="font-size: 1em;"> Guardar</i>
+            </button>
+          </td>
+          <td pEditableColumn>
+            <button
+              type="button"
+              class="btn btn-primary"
+              (click)="eliminar(rowData)"
+            >
+              <i class="pi pi-trash" style="font-size: 1em;"> Borrar</i>
+            </button>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+</div>

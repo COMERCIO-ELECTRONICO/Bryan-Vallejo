@@ -1,0 +1,4 @@
+{"$$indexCreated":{"fieldName":"id","unique":true,"sparse":false}}
+{"createdAt":1590681302043,"updatedAt":1590681302043,"id":1,"nombre":"cat","edad":2,"idUsuario":null,"_id":1}
+{"createdAt":1590681328003,"updatedAt":1590681328003,"id":2,"nombre":"dog","edad":2,"idUsuario":null,"_id":2}
+{"createdAt":1590681453818,"updatedAt":1590681453818,"id":3,"nombre":"dog N°2","edad":2,"idUsuario":null,"_id":3}
