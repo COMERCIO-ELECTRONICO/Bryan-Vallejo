@@ -1,26 +1,35 @@
 <div class="container">
-  <div class="row mt-5">
+  <div class="row">
     <div class="col-sm-4"></div>
     <div class="col-sm-4">
       <button
       pButton
       type="button"
       label="Registro"
-      class="ui-button-rounded btn-block"
+      class="ui-button-rounded ui-button-success"
       ></button>
     </div>
     <div class="col-sm-4"></div>
   </div>
-  <div class="row mt-5">
+
+  <div class="row">
     <div class="col-sm-4"></div>
     <div class="col-sm-4">
       <button pButton
       type="button"
       label="Login"
-      class="ui-button-rounded btn-block"
+      class="ui-button-rounded ui-button-success"
       [routerLink]="['/login']"
       ></button>
     </div>
     <div class="col-sm-4"></div>
   </div>
 </div>
+
+<h3>Rounded Buttons</h3>
+<button pButton type="button" label="Primary" class="ui-button-rounded"></button>
+<button pButton type="button" label="Secondary" class="ui-button-rounded ui-button-secondary"></button>
+<button pButton type="button" label="Success" class="ui-button-rounded ui-button-success"></button>
+<button pButton type="button" label="Info" class="ui-button-rounded ui-button-info"></button>
+<button pButton type="button" label="Warning" class="ui-button-rounded ui-button-warning"></button>
+<button pButton type="button" label="Danger" class="ui-button-rounded ui-button-danger"></button>

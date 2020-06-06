@@ -1,0 +1,140 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <form class="example-form">
+        <mat-form-field
+        class="example-full-width">
+          <mat-label>Nombre 1</mat-label>
+          <input
+          matInput
+          required
+          placeholder="xxx@xxx.com"
+          name="nombre1"
+          [(ngModel)]="nombre1"
+          >
+        </mat-form-field>
+      </form>
+    </div>
+    <div class="col-sm-6">
+      <form class="example-form">
+        <mat-form-field
+        class="example-full-width">
+          <mat-label>Nombre 2</mat-label>
+          <input
+          matInput
+          required
+          placeholder="xxx@xxx.com"
+          name="nombre2"
+          [(ngModel)]="nombre2"
+          >
+        </mat-form-field>
+      </form>
+    </div>
+    <div class="col-sm-6">
+      <form class="example-form">
+        <mat-form-field
+        class="example-full-width">
+          <mat-label>Apellido 1</mat-label>
+          <input
+          matInput
+          required
+          placeholder="xxx@xxx.com"
+          name="apellido1"
+          [(ngModel)]="apellido1"
+          >
+        </mat-form-field>
+      </form>
+    </div>
+    <div class="col-sm-6">
+      <form class="example-form">
+        <mat-form-field
+        class="example-full-width">
+          <mat-label>Apellido 2</mat-label>
+          <input
+          matInput
+          required
+          placeholder="xxx@xxx.com"
+          name="apellido2"
+          [(ngModel)]="apellido2"
+          >
+        </mat-form-field>
+      </form>
+    </div>
+    <div class="col-sm-6">
+      <form class="example-form">
+        <mat-form-field
+        class="example-full-width">
+          <mat-label>Correo</mat-label>
+          <input
+          matInput
+          required
+          placeholder="xxx@xxx.com"
+          name="email"
+          [(ngModel)]="email"
+          >
+        </mat-form-field>
+      </form>
+    </div>
+    <div class="col-sm-6">
+      <form class="example-form">
+        <mat-form-field
+        class="example-full-width">
+          <mat-label>Tlf</mat-label>
+          <input
+          matInput
+          required
+          placeholder="xxx@xxx.com"
+          name="telefono"
+          [(ngModel)]="telefono"
+          >
+        </mat-form-field>
+      </form>
+    </div>
+    <div class="col-sm-6">
+      <form class="example-form">
+        <mat-form-field
+        class="example-full-width">
+          <mat-label>Pass</mat-label>
+          <input
+          type="password"
+          matInput
+          required
+          placeholder="xxx@xxx.com"
+          name="pass"
+          [(ngModel)]="pass"
+          >
+        </mat-form-field>
+      </form>
+    </div>
+    <div class="col-sm-6">
+      <form class="example-form">
+        <mat-form-field
+        class="example-full-width">
+          <mat-label>Conf pass</mat-label>
+          <input
+          type="password"
+          matInput
+          required
+          placeholder="xxx@xxx.com"
+          name="confimarPassword"
+          [(ngModel)]="confimarPassword"
+          >
+        </mat-form-field>
+      </form>
+    </div>
+    </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <button class="
+      btn
+      btn-outline-success
+      btn-block"
+      (click)="crearOEditar()"
+      [disabled]="confimarPassword===''"
+      >
+        Crear/editar
+      </button>
+    </div>
+  </div>
+</div>

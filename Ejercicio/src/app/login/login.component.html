@@ -1,1 +1,74 @@
-<p>login works!</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+      <p-autoComplete
+        [(ngModel)]="valorAutocomplete"
+        [suggestions]="sugerencias"
+        (completeMethod)="buscarSugerencia($event)"
+        [dropdown]="true"
+        (onSelect)="seteoValorSeleccionado($event)"
+        >
+      </p-autoComplete>
+
+      <form class="example-form">
+        <mat-form-field
+        class="example-full-width">
+          <mat-label>Correo</mat-label>
+          <input
+          matInput
+          required
+          placeholder="xxx@xxx.com"
+          name="email"
+          [(ngModel)]="email"
+          >
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Contraseña</mat-label>
+          <input
+          type="password"
+          matInput
+          required
+          name="pass"
+          [(ngModel)]="pass"
+          placeholder="****">
+        </mat-form-field>
+      </form>
+    </div>
+    <div class="col-sm-4"></div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <button class="btn btn-outline-success btn-block"  (click)="ingresar()">
+        Ingresar
+      </button>
+    </div>
+    <div class="col-sm-6">
+      <button class="btn
+      btn-outline-success
+      btn-block"
+      (click)="eliminarRegitroPorId()">
+        Crear
+      </button>
+    </div>
+  </div>
+</div>
